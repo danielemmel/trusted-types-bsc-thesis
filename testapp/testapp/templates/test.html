@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Test</title>
+    <script src="/static/purify.min.js"></script>
+    <script src="/static/library.js"></script>
+    <script src="/static/SHA256.js"></script>
+    <script src="https://unpkg.com/esprima@~4.0/dist/esprima.js"></script>
+    <script>
+        function performArraySubstitution(obj) {
+            for (const key in obj) {
+                if (obj.hasOwnProperty(key)) {
+                    if (Array.isArray(obj[key]))
+                        obj[key] = new Set(obj[key])
+                    else
+                        performArraySubstitution(obj[key])
+                }
+            }
+        }
+
+        (function () {
+            let xhr = new XMLHttpRequest()
+            xhr.open('GET', '/static/config.json', false)
+            xhr.send()
+            window.config = JSON.parse(xhr.response)
+            // transform arrays in config to sets for runtime optimization
+            performArraySubstitution(config);
+            window.sanitizerLibrary = new SanitizerLibrary(config)
+        })();
+
+        const pol = trustedTypes.createPolicy('default', {
+            createScriptURL: (s, type) => {
+                return sanitizerLibrary.sanitizeInput(s, type);
+            },
+            createScript: (s, type) => {
+                return sanitizerLibrary.sanitizeInput(s, type);
+            },
+            createHTML: (s, type) => {
+                return sanitizerLibrary.sanitizeInput(s, type);
+            }
+        });
+    </script>
+</head>
+<body>
+<script>
+    // hash: "b0eab8a77fc8526760d74f854f8cdae033b6fcc0f268ff40c3e4d1ca5d58d3d0"
+    // regex: /alert(42)/
+    let s = '<p onclick="alert(42);" onload="l.x=42;" onerror="console.log(42);" id=42>Hello</p><scrip'
+    s += 't>var x = 45; console.log(69); const b = document.body.innerHTML'
+    // regex: /varx=45;console.log(69);constb=document.body.innerHTML/
+    // hash: "be3fa374bb93a292ed39e2f1a2064c692ee47a43c52805080f1ee72c323fe3ec"
+    s += '</scr'
+    s += 'ipt>'
+
+    /*
+    a = '<iframe src="data:text/html,'
+    s = '<p>Hallo</p><scrip'
+    s += 't>alert(`hi`);</scr'
+    s += 'ipt>'
+    s = a + s
+    s = s + '"></iframe>'
+     */
+</script>
+
+<script>
+    /*
+    s = '<p onclick="alert(42);" onload="l.x=42;" onerror="console.log(42);" id=42>Hello</p><scrip'
+    s += 't src="https://example.com/script.js?abc=42">'
+    s += '</scr'
+    s += 'ipt>'
+    */
+    s = '<p>Empty Script</p><scrip'
+    s += 't>'
+    s += '</scr'
+    s += 'ipt>'
+    document.write(s)
+</script>
+
+<script>
+    let el = document.createElement('script')
+    el.innerText = 'var x = 45; console.log(69); const p = document.body.innerHTML'
+    document.body.appendChild(el)
+    window.r = eval('({"a": 42})')
+</script>
+<script>
+    a = document.createElement('script')
+    a.src = 'http://localhost/script.js';
+    document.body.appendChild(a)
+</script>
+-->
+</body>
+</html>

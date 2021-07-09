@@ -1,0 +1,112 @@
+
+without allow-any:
+Run 1 (13.2.2021)
+Total of non-changed inputs: 6103/6103
+Total of newly encountered TrustedScriptURL uses: 0
+Total of newly encountered TrustedScript uses: 0
+Total of newly encountered TrustedHTML uses: 0
+Total of new parties or new TrustedTypes used by existing parties: 0
+Amount of origins for which no config was found: 0/126
+
+Run 2 (14.2.2021)
+Total of non-changed inputs: 5642/5842
+Total of newly encountered TrustedScriptURL uses: 69
+Total of newly encountered TrustedScript uses: 50
+Total of newly encountered TrustedHTML uses: 26
+Total of new parties or new TrustedTypes used by existing parties: 55
+Amount of origins for which no config was found: 4/120
+
+Run 3 (15.2.2021)
+Total of non-changed inputs: 5632/5848
+Total of newly encountered TrustedScriptURL uses: 88
+Total of newly encountered TrustedScript uses: 50
+Total of newly encountered TrustedHTML uses: 29
+Total of new parties or new TrustedTypes used by existing parties: 49
+Amount of origins for which no config was found: 7/125
+
+Run 4 (16.2.2021)
+Total of non-changed inputs: 5507/5771
+Total of newly encountered TrustedScriptURL uses: 153
+Total of newly encountered TrustedScript uses: 82
+Total of newly encountered TrustedHTML uses: 27
+Total of new parties or new TrustedTypes used by existing parties: 2
+Amount of origins for which no config was found: 3/119
+
+Run 5 (17.2.2021)
+Total of non-changed inputs: 5422/5708
+Total of newly encountered TrustedScriptURL uses: 162
+Total of newly encountered TrustedScript uses: 71
+Total of newly encountered TrustedHTML uses: 31
+Total of new parties or new TrustedTypes used by existing parties: 22
+Amount of origins for which no config was found: 5/121
+
+Run 6 (18.2.2021)
+Total of non-changed inputs: 5366/5668
+Total of newly encountered TrustedScriptURL uses: 182
+Total of newly encountered TrustedScript uses: 76
+Total of newly encountered TrustedHTML uses: 27
+Total of new parties or new TrustedTypes used by existing parties: 17
+Amount of origins for which no config was found: 3/118
+
+Run 7 (19.2.2021)
+Total of non-changed inputs: 5158/5492
+Total of newly encountered TrustedScriptURL uses: 188
+Total of newly encountered TrustedScript uses: 109
+Total of newly encountered TrustedHTML uses: 25
+Total of new parties or new TrustedTypes used by existing parties: 12
+Amount of origins for which no config was found: 3/118
+
+Run 8 (20.2.2021)
+Total of non-changed inputs: 5176/5536
+Total of newly encountered TrustedScriptURL uses: 185
+Total of newly encountered TrustedScript uses: 114
+Total of newly encountered TrustedHTML uses: 34
+Total of new parties or new TrustedTypes used by existing parties: 27
+Amount of origins for which no config was found: 4/121
+
+Run 9 (21.2.2021)
+Total of non-changed inputs: 5139/5510
+Total of newly encountered TrustedScriptURL uses: 182
+Total of newly encountered TrustedScript uses: 112
+Total of newly encountered TrustedHTML uses: 28
+Total of new parties or new TrustedTypes used by existing parties: 49
+Amount of origins for which no config was found: 4/119
+
+Run 10 (22.2.2021)
+Total of non-changed inputs: 5117/5468
+Total of newly encountered TrustedScriptURL uses: 208
+Total of newly encountered TrustedScript uses: 107
+Total of newly encountered TrustedHTML uses: 28
+Total of new parties or new TrustedTypes used by existing parties: 8
+Amount of origins for which no config was found: 4/121
+
+with allow-any (threshold of 10):
+Run 1 (13.2.2021)
+Total of non-changed inputs: 6103/6103
+
+Run 2 (14.2.2021)
+Total of non-changed inputs: 5699/5842
+
+Run 3 (15.2.2021)
+Total of non-changed inputs: 5702/5848
+
+Run 4 (16.2.2021)
+Total of non-changed inputs: 5629/5771
+
+Run 5 (17.2.2021)
+Total of non-changed inputs: 5546/5708
+
+Run 6 (18.2.2021)
+Total of non-changed inputs: 5502/5668
+
+Run 7 (19.2.2021)
+Total of non-changed inputs: 5331/5492
+
+Run 8 (20.2.2021)
+Total of non-changed inputs: 5353/5536
+
+Run 9 (21.2.2021)
+Total of non-changed inputs: 5317/5510
+
+Run 10 (22.2.2021)
+Total of non-changed inputs: 5307/5468

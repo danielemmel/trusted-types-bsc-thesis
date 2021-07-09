@@ -1,0 +1,47 @@
+{
+  "http://ads.com": {
+    "TrustedHTML": {
+      "hashes": [
+        "9ff943a7092302075e74c8ab7798903f74b6b911bc3acabcf11c666cb6ad7166"
+      ],
+      "scripts": {
+        "regexes": ["^alert\\(42\\)$","varx=45;console.log\\(69\\);constb=document.body.innerHTML"],
+        "hashes": [],
+        "prefixes": ["https://example.com/script.js"]
+      },
+      "strict": false,
+      "allow-any": false
+    },
+    "TrustedScriptURL": {
+      "hashes": [
+        "ce824cbaa0a1d85bce12ff903813b17a7ae8ec3acb520a87ac07ce62ab5d1235"
+      ],
+      "origins": [
+        "https://www.gmx.net"
+      ],
+      "hosts": [
+        "localhost"
+      ],
+      "prefixes": [
+        "http://localhost/script.js, https://example.com/script.js"
+      ],
+      "eTLDs": [
+        "example.com"
+      ],
+      "dataHashes":[
+        "96b90e5ea4b5b57217f1007fb3bf0556af6a8d648655cf530e86e9f6f0bc8169"
+      ],
+      "allow-any": false
+    },
+    "TrustedScript": {
+      "hashes": [
+        "26add0976eec4338e8685646283277dde40b22b89787f89829e8d40b2de30106"
+      ],
+      "regexes": [
+        "varx=45;console.log\\(69\\);const[a-z]=document.body.innerHTML"
+      ],
+      "allow-any": false
+    }
+  },
+  "ignoreList": []
+}
