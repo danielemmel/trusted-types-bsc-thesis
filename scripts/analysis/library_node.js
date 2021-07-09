@@ -1,3 +1,7 @@
+/*
+This is a recreation of the client-side SanitizerLibrary only used for easier evaluation of the functionality of the created configs against the database.
+*/
+
 const createDOMPurify = require('dompurify');
 const {JSDOM} = require('jsdom');
 
